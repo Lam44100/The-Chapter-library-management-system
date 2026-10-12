@@ -1,3 +1,13 @@
 commit_template.md
 /.vscode/
 .drawio/
+/bin/
+/target/
+/.tools/
+/.local/
+/frontend/node_modules/
+/frontend/dist/
+/frontend/test-results/
+/frontend/playwright-report/
+/.env
+*.log
