@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: chapter-library
+    runtime: docker
+    plan: free
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: DEMO_PASSWORD
+        generateValue: true
+      - key: DEMO_ENABLED
+        value: 'true'
+      - key: COOKIE_SECURE
+        value: 'true'
+      - key: PORT
+        value: '8080'
