@@ -11,3 +11,4 @@ commit_template.md
 /frontend/playwright-report/
 /.env
 *.log
+*.tsbuildinfo
