@@ -1,16 +1,55 @@
-# Chapter · The community library
+# The Chapter · Library Management System
 
 A Java + React library application: find a book, reserve a copy, manage lending, and keep the collection moving. Refined from an object-oriented programming assignment into a tested, database-backed portfolio project.
 
-**Publishing status:** deployment is prepared; public hosting is deferred at the owner's request.
+**Hosting status:** deployment configuration is included; a public hosted demo is not available yet.
+
+## Page tour
+
+These screenshots show the application running locally with fictional demo data.
+
+### Discover books
+
+Browse the collection, search by title, author, or ISBN, and filter by genre or availability. Each book card shows how many copies are available.
 
 ![Chapter catalog](docs/media/catalog-desktop.png)
+
+### Book details
+
+View a book's description, publisher, ISBN, borrowing rules, and individual copy status. Members can place a reservation; visitors are prompted to sign in first.
+
+![Book details and copy availability](docs/media/book-detail.png)
+
+### Sign-in and demo roles
+
+Explore the library as a reader, librarian, or administrator using shared sample accounts. An email-and-password sign-in option is also available.
+
+![Sign-in page with reader, librarian, and administrator demo roles](docs/media/demo-roles.png)
+
+### Librarian dashboard
+
+See collection and lending totals, overdue loans, reservations ready for pickup, and recent activity. Staff can follow up on overdue books and navigate to circulation and reservation management.
+
+![Librarian dashboard with overdue loans and pickup reservations](docs/media/staff-dashboard.png)
+
+### Mobile catalog
+
+The catalog adapts to a narrow screen with a two-column bookshelf and a compact navigation menu.
+
+<details>
+<summary>View the full mobile screenshot</summary>
+
+<img src="docs/media/catalog-mobile.png" alt="Responsive catalog on a 390-pixel-wide mobile screen" width="390">
+
+</details>
 
 ## Try it locally
 
 Prerequisite: Docker Desktop with its Linux engine running.
 
 ```sh
+git clone https://github.com/Lam44100/The-Chapter-library-management-system.git
+cd The-Chapter-library-management-system
 docker compose up --build -d --wait
 ```
 

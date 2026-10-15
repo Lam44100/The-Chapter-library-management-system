@@ -1,14 +1,47 @@
-commit_template.md
-/.vscode/
-.drawio/
+# Local credentials and environment overrides (keep the safe example)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Java / Maven generated files
 /bin/
 /target/
-/.tools/
-/.local/
-/frontend/node_modules/
+*.class
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+
+# Frontend dependencies, builds, and test output
+node_modules/
 /frontend/dist/
+/frontend/coverage/
 /frontend/test-results/
 /frontend/playwright-report/
-/.env
-*.log
+/frontend/playwright/.cache/
 *.tsbuildinfo
+
+# Local tools, editor settings, and scratch files
+/.tools/
+/.local/
+/.vscode/
+/.idea/
+*.iml
+/.classpath
+/.project
+/.settings/
+.drawio/
+commit_template.md
+*.log
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

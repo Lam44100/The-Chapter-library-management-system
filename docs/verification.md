@@ -1,6 +1,6 @@
 # Verification record
 
-Local verification date: **15 October 2026**. Publishing remains deferred at the owner's request.
+Local verification date: **15 October 2026**. Public hosting remains pending; source code and CI are available in the [GitHub repository](https://github.com/Lam44100/The-Chapter-library-management-system).
 
 ## Executed checks
 
@@ -56,7 +56,7 @@ To recreate the portfolio media, run `npm run capture` from `frontend` against a
 These are deliberately **not claimed as completed**:
 
 - A public Render URL, Neon connectivity, hosting eligibility/quotas, HTTPS cookies, and hosted role workflows.
-- A remote GitHub Actions run; its workflow is prepared, but nothing has been pushed.
+- A successful remote GitHub Actions run. The workflow runs on pushes and pull requests; see [Actions](https://github.com/Lam44100/The-Chapter-library-management-system/actions) for the latest result. The local results above do not establish remote CI success.
 - Render cold-start latency. Local startup/restart and missed-reset recovery passed, but they do not measure the hosting provider.
 - Upgrade from an earlier persistent schema: V1 is the first database schema. Future migrations must be tested against the previous release; the original assignment has no database to migrate.
 - Cross-browser and full accessibility certification. Chromium desktop/mobile behavior and visual screenshots were checked; this is not a claim of exhaustive assistive-technology coverage.

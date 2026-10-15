@@ -4,7 +4,7 @@ Public hosting is intentionally deferred. The repository targets one free Render
 
 ## Publish later
 
-1. Push the reviewed commits and `assignment-original` tag to the intended GitHub repository. This implementation does not push automatically.
+1. Use the [project repository](https://github.com/Lam44100/The-Chapter-library-management-system) as the deployment source, and check its latest GitHub Actions result before deploying.
 2. Create a free Neon project/database; keep credentials in the provider dashboards.
 3. Create a Render Blueprint from `render.yaml` and retain the **free** plan.
 4. Set `DATABASE_URL` to `jdbc:postgresql://HOST/DATABASE?sslmode=require`, with separate `DATABASE_USERNAME` and `DATABASE_PASSWORD`. A plain `postgresql://user:password@host/...` string is not a JDBC URL.
