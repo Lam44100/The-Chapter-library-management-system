@@ -18,6 +18,6 @@ The rewrite preserves the useful distinction between a book title and a borrowab
 
 ## Boundaries and future evolution
 
-This release is a bounded portfolio demo, not a deployed production organization. Public hosting is prepared but deferred. No real personal data, registration, payments, or notifications are included. No benchmark or adoption claims are made.
+This release is a bounded portfolio demo, not a deployed production organization. The [public demo](https://the-chapter-library.onrender.com) uses Render Free and Neon Free. No real personal data, registration, payments, or notifications are included. No benchmark or adoption claims are made.
 
 A production successor would need database-side search/pagination, narrower lock boundaries, persistent/distributed sessions, organization-specific identity, monitoring, and a non-destructive retention policy. See the verification record for checks actually executed.

@@ -1,8 +1,19 @@
 # Deployment and operator guide
 
-Public hosting is intentionally deferred. The repository targets one free Render Docker service plus free Neon PostgreSQL. Recheck provider terms when publishing; never enable a paid upgrade automatically.
+The public demo runs at **[the-chapter-library.onrender.com](https://the-chapter-library.onrender.com)** using Render Free and Neon Free, both in Singapore. No paid plan was selected.
 
-## Publish later
+## Current deployment
+
+- Render web service: `the-chapter-library`, built from this repository's `main` branch and root `Dockerfile`.
+- Neon project: `chapter-library`, PostgreSQL 17, database `chapter`, branch `production`.
+- Database credentials and a randomly generated demo password are configured as Render environment variables, outside Git.
+- HTTPS session cookies are enabled with `COOKIE_SECURE=true`; demo entry and daily resets use `DEMO_ENABLED=true`.
+- The service was created directly through Render. It auto-deploys commits to `main`; `render.yaml` remains a template for a separate Blueprint-managed deployment, including an HTTP health check and deployment after CI passes.
+- Application health is available at [`/actuator/health`](https://the-chapter-library.onrender.com/actuator/health).
+
+Render Free sleeps after 15 minutes without traffic. The first request afterward can take a minute or more, and session state is lost when the app restarts. Free instance hours are shared across all free web services in the workspace, including any unrelated existing services. Neon data persists independently of the app, subject to free-plan quotas and the app's intentional daily demo reset. Review usage in both dashboards; do not enable paid upgrades or artificial keep-alive traffic.
+
+## Recreate the deployment
 
 1. Use the [project repository](https://github.com/Lam44100/The-Chapter-library-management-system) as the deployment source, and check its latest GitHub Actions result before deploying.
 2. Create a free Neon project/database; keep credentials in the provider dashboards.

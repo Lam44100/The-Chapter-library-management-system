@@ -2,7 +2,9 @@
 
 A Java + React library application: find a book, reserve a copy, manage lending, and keep the collection moving. Refined from an object-oriented programming assignment into a tested, database-backed portfolio project.
 
-**Hosting status:** deployment configuration is included; a public hosted demo is not available yet.
+**[Open the live library →](https://the-chapter-library.onrender.com)**
+
+Choose **Try the library** to explore as a reader, librarian, or administrator. Hosted on Render Free with PostgreSQL on Neon Free. The first visit after inactivity can take a minute or more while the server wakes up. Demo records are shared and reset daily at **04:00 Asia/Kuala_Lumpur**; use fictional information only.
 
 ## Page tour
 
